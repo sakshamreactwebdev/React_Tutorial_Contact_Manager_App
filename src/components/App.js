@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
-import "./App.css";
-import Header from "./Header";
 import AddContact from "./AddContact";
+import "./App.css";
 import ContactList from "./ContactList";
+import Header from "./Header";
 
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
@@ -11,6 +11,7 @@ function App() {
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) ?? []
   );
 
+    console.log("hello");
   const addContactHandler = (contact) => {
     console.log(contact);
     setContacts([...contacts, { id: uuid(), ...contact }]);
