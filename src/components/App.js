@@ -11,7 +11,6 @@ function App() {
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) ?? []
   );
 
-    console.log("hello");
   const addContactHandler = (contact) => {
     console.log(contact);
     setContacts([...contacts, { id: uuid(), ...contact }]);
