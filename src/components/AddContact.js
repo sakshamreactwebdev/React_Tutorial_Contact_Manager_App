@@ -30,6 +30,7 @@ class AddContact extends React.Component {
               onChange={(e) => this.setState({ name: e.target.value })}
             />
           </div>
+          
           <div className="field">
             <label>Email</label>
             <input
